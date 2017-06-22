@@ -18,10 +18,14 @@ function pushToArray(string, num){
   return tempTask;
 }
 
+function onClick() {
+  
+}
+
 app.get('/todo/', function (req, res) {
 
   res.render('todo', {todoList: list.todoList,
-  completedList: list.completedList})
+  completedList: clist.completedList})
 });
 
 app.post('/', function(req, res){
