@@ -1,10 +1,11 @@
 const express = require('express');
 const path = require('path');
-const list = require('./data.js');
+// const list = require('./data.js');
 const clist = require('./completedList.js');
 const mustacheExpress = require('mustache-express');
 var bodyParser = require('body-parser');
 const app = express();
+const models = require('./models')
 
 app.engine('mustache', mustacheExpress());
 app.set('views', './views')
@@ -15,17 +16,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 function pushToArray(string, num){
   let tempTask = {'item': string,
 "id":''+num};
+console.log(tempTask)
   return tempTask;
 }
 
-function onClick() {
-  
-}
+
 
 app.get('/todo/', function (req, res) {
 
-  res.render('todo', {todoList: list.todoList,
-  completedList: clist.completedList})
+  res.render('todo', {todoList: list.todoList})
 });
 
 app.post('/', function(req, res){
