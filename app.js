@@ -26,14 +26,15 @@ app.post('/', function(req, res){
 
   const item = models.NewTodoList.build({
 
-  item: req.body.name
+  item: req.body.item
   // status:
 })
   item.save().then(() => {});
   res.redirect('/todo');
     item: ''
 
-item.save().then(function(newItem){
+item.save().then(function(){
+  console.log("hello")
 });
 });
 
