@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var List = sequelize.define('List', {
+  var NewTodoList = sequelize.define('NewTodoList', {
     item: DataTypes.STRING,
     status: DataTypes.STRING
   }, {
@@ -10,5 +10,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return List;
+  return NewTodoList;
 };
