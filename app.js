@@ -21,21 +21,21 @@ app.get('/todo/', function (req, res) {
   res.render('todo')
 });
 
-let item = models.NewTodoList.build({
-  item: ''
-})
+
 app.post('/', function(req, res){
-  item.item = req.body.name;
+
+  const item = models.NewTodoList.build({
+
+  item: req.body.name
+  // status:
+})
   item.save().then(() => {});
   res.redirect('/todo');
-  });
-
-
-
-
+    item: ''
 
 item.save().then(function(newItem){
-})
+});
+});
 
 
 app.listen(3000, function(){
