@@ -30,15 +30,11 @@
           <h1>Todo List</h1>
           <p>Enter a todo</p>
           <form class="inputArea" action="/" method="post">
-          <input type="text" name="item" placeholder="inputTask" />
+          <input type="text" name="item" placeholder="task" />
+          <input type="text" name="status" placeholder="status" />
           <button type="submit">Submit</button>
           <br>
         </form>
-          <ul class="todo-list">
-          {{#todoList}}
-            <li>{{item}}<button type="submit" id={{id}}>Complete</button></li>
-          {{/todoList}}
-          </ul>
         </div>
       </div>
     </div>

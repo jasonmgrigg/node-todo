@@ -23,20 +23,17 @@ app.get('/todo/', function (req, res) {
 
 
 app.post('/', function(req, res){
-
   const item = models.NewTodoList.build({
-
-  item: req.body.item
-  // status:
+  item: req.body.item,
+  status: req.body.status
 })
-  item.save().then(() => {});
-  res.redirect('/todo');
-    item: ''
+item.save().then(() => {});
+  const status = models.NewTodoList.build({
+})
+    res.redirect('/todo');
+  });
 
-item.save().then(function(){
-  console.log("hello")
-});
-});
+
 
 
 app.listen(3000, function(){
